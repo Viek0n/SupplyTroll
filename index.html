@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="misc.js"></script>
+    <title>SubblyHup.Shop</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="anh-bia">
+            <p>TIỂU THUYẾT</p>
+            <img src="Starry.jpg">
+        </div>
+        <!--Thanh tiện ích-->
+        <div class="thanh-tien-ich">
+            <!--Logo-->
+            <div class="khung-logo">
+                <img src="Logo.png">
+            </div>
+            
+            <!--Thanh chắn-->
+            <div class="thanh-chan"></div>
+            
+            <!--Thanh tìm kiếm-->
+            <div class="thanh-tim-kiem">
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+
+            <!--Giỏ hàng-->
+            <div class="khung-tien-ich">
+                <img src="GioHang.png">
+                <b>Giỏ Hàng</b>
+            </div>
+
+            <!--Liên hệ-->
+            <div class="khung-tien-ich">
+                <img src="LienHe.png">
+                <b>Liên Hệ</b>
+            </div>  
+
+            <!--Tài khoản-->
+
+            <!--<div class="Khung_Convenient">
+                <img src="AccCount.jpg">
+                <b>Tài Khoản</b>
+            </div>-->
+            <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+            <button onclick="document.getElementById('id01').style.display='block'">Register</button>
+            <div id="id01" class="modal">
+                <form class="modal-content zoomanimate" action="/action_page.php" method="post">
+                    <div class="imgcontainerx">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    </div>
+                    <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required> 
+                        <button type="submit">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!--Content chính-->
+        <div>
+            <!--Khung thể loại-->
+            <div class="the-loai">
+                <a href="#trinhtham" id="anchor">Tiểu Thuyết Trinh Thám</a>
+                <a href="#tinhcam" id="anchor">Tiểu Thuyết Tình Cảm</a>
+                <a href="#kinhdi" id="anchor">Tiểu Thuyết Kinh Dị</a>
+                <a href="#lichsu" id="anchor">Tiểu Thuyết Lịch Sử</a>
+                <a href="#giatuong" id="anchor">Tiểu Thuyết Giả Tưởng</a>
+                <a href="#hucau" id="anchor">Tiểu Thuyết Hư Cấu Hiện Thực</a>
+            </div>
+
+            <!--Content-->
+            <div class="khung-content" id ="khungcontent">
+                <!--Content 1-->
+                <div class="thanh-content" id="trinhtham"></div>
+                <div class="content-name">
+                    <b>Tiểu Thuyết Trinh Thám</b>
+                </div>
+
+                <div class="content">
+                    <script>
+                        createContent('pics/4t/4t1.PNG','77.000 VNĐ','Những cuộc phiêu lưu của Sherlock Holme',1);
+                        createContent('pics/4t/4t2.PNG','123.000 VNĐ','Mật mã Da Vinci',1);
+                        createContent('pics/4t/4t3.PNG','132.000 VNĐ','Sự im lặng của bầy cừu',1);
+                        createContent('pics/4t/4t3.PNG','132.000 VNĐ','Sự im lặng của bầy cừu',1);
+                    </script>
+                </div>
+
+                <!--Content 2-->
+                <div class="thanh-content" id = "tinhcam"></div>
+                <div class="content-name">
+                    <b>Tiểu Thuyết Tình Cảm</b>
+                </div>
+                <div  class="content">
+                    <script>
+                        createContent("pics/tttc/tttc1.jpg","120.000 VNĐ","Đường hầm tới mùa hạ - Lối thoát của biệt ly",2);
+                        createContent("pics/tttc/tttc2.PNG","89.000 VNĐ","Và Rồi, Tháng 9 Không Có Cậu Đã Tới",2);
+                        createContent("pics/tttc/tttc3.PNG","93.000 VNĐ","Tớ Sẽ Mãi Mãi Không Quên Cậu, Người Từng Sống Trong Khoảnh Khắc",2);
+                        createContent("pics/tttc/tttc3.PNG","93.000 VNĐ","Tớ Sẽ Mãi Mãi Không Quên Cậu, Người Từng Sống Trong Khoảnh Khắc",2);
+                    </script>               
+                </div>
+
+                <!--Content 3-->
+                <div class="thanh-content" id = "kinhdi"></div>
+                <div class="content-name">
+                    <b>Tiểu Thuyết Kinh Dị</b>
+                </div>
+                <div  class="content">
+                    <script>
+                        createContent("pics/ttkd/ttkd1.PNG","99.000 VNĐ","Chế độ thứ II",3);
+                        createContent("pics/ttkd/ttkd2.PNG","199.000 VNĐ","Ác Mộng Kinh Hoàng",3);
+                        createContent("pics/ttkd/ttkd3.PNG","144.000 VNĐ","Frankenstein",3);
+                        createContent("pics/ttkd/ttkd3.PNG","144.000 VNĐ","Frankenstein",3);
+                    </script>
+                </div>
+
+                <!--Content 4-->
+                <div class="thanh-content" id = "lichsu"></div>
+                <div class="content-name">
+                    <b>Tiểu Thuyết Lịnh Sử</b>
+                </div>
+                <div  class="content">
+                    <script>
+                        createContent("pics/ttls/ttls1.PNG","549.000 VNĐ","Những Người Khốn Khổ (trọn bộ 5 tập)",4);
+                        createContent("pics/ttls/ttls2.PNG","149.000 VNĐ","Chiến Tranh Và Hòa Bình",4);
+                        createContent("pics/ttls/ttls3.PNG","109.000 VNĐ","Cuốn Theo Chiều Gió",4);
+                        createContent("pics/ttls/ttls3.PNG","109.000 VNĐ","Cuốn Theo Chiều Gió",4);
+                    </script>
+                </div>
+
+                <!--Content 5-->
+                <div class="thanh-content" id = "giatuong"></div>
+                <div class="content-name">
+                    <b>Tiểu Thuyết Giả Tưởng</b>
+                </div>
+                <div class="content">
+                    <script>
+                        createContent("pics/ttgt/ttgt1.PNG","549.000 VNĐ","The Three-Body Problem – Tam Thể",5);
+                        createContent("pics/ttgt/ttgt2.PNG","140.000 VNĐ","Chúa Tể Những Chiếc Nhẫn - Nhà Vua Trở Về",5);
+                        createContent("pics/ttgt/ttgt3.PNG","186.000 VNĐ","Harry Potter và Hòn đá phù thủy",5);
+                        createContent("pics/ttgt/ttgt3.PNG","186.000 VNĐ","Harry Potter và Hòn đá phù thủy",5);
+                    </script>
+                </div>
+
+                <!--Content 6-->
+                <div class="thanh-content" id="hucau"></div>
+                <div class="content-name">
+                    <b>Tiểu Thuyết Hư Cấu Hiện Thực</b>
+                </div>
+                <div  class="content">
+                    <script>
+                        createContent("pics/tthcht/tthcht1.png","245.000 VNĐ","Don Quixote - Nhà Quý Tộc Tài Ba Xứ Mancha (Trọn Bộ 2 Tập)",6);
+                        createContent("pics/tthcht/tthcht2.png","322.000 VNĐ","Vết đốt của ong",6);
+                        createContent("pics/tthcht/tthcht3.png","300.000 VNĐ","Những ngôi sao của Chain-Gang",6);
+                        createContent("pics/tthcht/tthcht3.png","300.000 VNĐ","Những ngôi sao của Chain-Gang",6);
+                    </script>
+                </div>  
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <!--
+    <script>
+        // Get references to the overflow div and the document body
+        const overflowDiv = document.getElementById('khungcontent');
+        const scrollThresholdPercentage = 1.4; 
+        
+        function enableScroll() {
+            overflowDiv.style.overflow = 'auto';
+            overflowDiv.style.overflowY = 'scroll';
+            overflowDiv.style.scrollbarWidth = 'none';
+            overflowDiv.style.scrollBehavior = 'smooth';
+        }
+
+        function disableScroll() {
+            overflowDiv.style.overflowY = 'hidden'; // Disable scrolling in inner div
+        }
+
+        // Listen for scroll events on the window (main page)
+        function updateOverflowDiv() { 
+            const mainScrollHeight = window.innerHeight * scrollThresholdPercentage;  // Total height of the page
+            const scrollPosition = window.innerHeight + window.pageYOffset;  // Current position + viewport height
+            // If the user scroll enough
+            if (scrollPosition >= mainScrollHeight) {
+               enableScroll();
+            }else {
+                // Optionally hide the overflow div if the scroll position is less than the threshold
+               disableScroll();
+            }
+        };
+        window.addEventListener('scroll', updateOverflowDiv);
+    </script>
+    -->
+</body>
+</html> 

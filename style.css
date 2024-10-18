@@ -1,0 +1,425 @@
+/**------------------------------------------------------------------------------------------
+toàn trang
+------------------------------------------------------------------------------------------**/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin : 0;
+    background-color: rgb(248, 248, 248);
+}
+
+a{
+    text-decoration: black;
+}
+
+a:visited{
+    color: black;
+}
+
+a:link{
+    color: black;
+}
+
+.page-container{
+    width: 100%;
+    position: relative;
+}
+/**------------------------------------------------------------------------------------------
+animation
+------------------------------------------------------------------------------------------**/
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@keyframes slide {
+    0%   { transform: translateX(100%); }  /* Start outside */
+    100% { transform: translateX(-100%); } /* End outside */
+}
+/**------------------------------------------------------------------------------------------
+bìa
+------------------------------------------------------------------------------------------**/
+.anh-bia{
+    width: 100%;
+    height: 50vh;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.anh-bia p{
+    font-size: 70px;
+    right: 34vw;
+    top: 10vh;
+    text-shadow: 
+        -2px -1px 0 #000,  
+        2px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    position: absolute;
+    color: white;
+}
+
+.anh-bia img{
+    width: 100%;
+    height: 100%;
+}
+/**------------------------------------------------------------------------------------------
+Logo và Search
+------------------------------------------------------------------------------------------**/
+.thanh-tien-ich{
+    width: 100%;
+    height: 110px;
+    margin-bottom: 2%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);/*Đổ bóng*/
+    float: left;
+    background-color: white;
+
+    /*Di chuyen theo view
+    position: sticky;
+    top: 0px;
+    z-index: 10;*/
+}
+
+.thanh-tien-ich button{
+    margin-top: 1%;
+    margin-left: 2%;
+    width: auto;
+    height: 50%;
+}
+
+.khung-logo{
+    width: 90px;
+    height: 90px;
+    margin-top: 10px;
+    margin-left: 8%;
+    float: left;
+}
+
+.khung-logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.khung-tien-ich{
+    width: 70px;
+    height: 70px;
+    margin-top: 8px;
+    margin-left: 2%;
+    text-align: center;
+    float: left;
+}
+
+.khung-tien-ich img{
+    max-width: 95%;
+    max-height: 95%;
+}
+
+.khung-tien-ich b{
+    margin: 0px;
+    font-size: 14px;
+}
+
+.thanh-tim-kiem{
+    width: 40%;
+    height: 50px;
+    margin-left: 3%;
+    margin-top: 25px;
+    float: left;
+}
+
+.thanh-tim-kiem input{
+    width: 100%; 
+    height: 70%;
+    border-radius: 8px;
+    border: black 2px;
+}
+
+.thanh-chan{
+    height: 80%; 
+    width: 1px; 
+    margin-top: 0.5%; 
+    margin-left: 5%;
+    float: left;
+    border-right: 2px black solid; 
+}
+/**------------------------------------------------------------------------------------------
+khung thể loại
+------------------------------------------------------------------------------------------**/
+.the-loai{
+    width: 18%;
+    margin-right: 2%;
+    margin-left: 4%;
+    border-radius: 8px;
+    float: left;
+}
+
+.the-loai a{
+    width: 90%;    
+    height: 14%;
+    margin: 2px;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    margin-top: 4%;
+    padding: 5px;
+    line-height: 35px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+    display: inline-block;
+}
+
+.the-loai a:hover{
+    transform: scale(1.05);
+}
+/**------------------------------------------------------------------------------------------
+Content
+------------------------------------------------------------------------------------------**/
+.khung-content{
+    width: 70%;
+    height: 1000px;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+    background-color: white;
+    border: 1px solid black;
+    float: left;
+    position: relative;
+    
+    overflow : auto;
+    overflow-y: scroll;
+    scrollbar-width:  none;
+    scroll-behavior: smooth;
+}
+
+.thanh-content{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    border: 2px solid black;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);    
+}
+
+.content{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.content-name{
+    margin-left: 1%;
+    margin-right: 1%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 1.5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+    background: white;
+}
+
+.image-container {
+    margin-left: 3.7%;
+    margin-top: 1%;
+    border-radius: 5%;
+    padding-top: 2%;
+    width: 20%; /* Điều chỉnh kích thước khung theo ý muốn */
+    height: 90%; /* Cho phép chiều cao tự động thay đổi dựa trên nội dung */
+    border: 2px solid #000; /* Tùy chọn đường viền */
+    display: flex;
+    flex-direction: column; /* Căn chỉnh phần tử con theo chiều dọc */
+    /*justify-content: center;  Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa nội dung bên trong theo chiều ngang */
+    float: left;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 60%;
+    height: 70%;
+    border: solid black 1px;
+    position: relative;
+}
+
+.image-container p#contentCost {
+    font-size: 18px; /* Kích thước chữ tùy chỉnh */
+    margin-top: 2%;
+    margin-bottom: 1%;
+    color: #333; /* Màu chữ tùy chỉnh */
+    text-align: center;
+    font-size:  15px;
+    white-space: nowrap;
+}
+
+.image-container b{
+    font-size: 18px; /* Kích thước chữ tùy chỉnh */
+    margin-bottom: 4%;
+    color: #333; /* Màu chữ tùy chỉnh */
+    text-align: center;
+    font-size:  15px;
+    white-space: nowrap;
+}
+
+.image-container p#contentName {
+    font-size: 18px; /* Kích thước chữ tùy chỉnh */
+    color: #333; /* Màu chữ tùy chỉnh */
+    text-align: center;
+    margin-top: 0;
+
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+
+.image-container:hover{
+    transform: scale(1.1);
+    background-color: white;
+}
+
+.image-container:hover b{
+    margin-bottom: 0;
+}
+
+.image-container:hover p#contentName{
+    margin-top: 0;
+    overflow: visible;
+    white-space: unset;
+    max-width: 95%;
+}
+/**------------------------------------------------------------------------------------------
+Footer
+------------------------------------------------------------------------------------------**/
+.footer{
+    clear: both; 
+    width: 100%;
+    height: 140px;
+    background-color: rgb(194, 240, 156);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+/**------------------------------------------------------------------------------------------
+Login form
+------------------------------------------------------------------------------------------**/
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+ 
+  button {
+    background-color: black;
+    color: white;
+    padding: 30px 30px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .zoomanimate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  .imgcontainerx {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+    

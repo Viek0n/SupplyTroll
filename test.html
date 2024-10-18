@@ -1,0 +1,49 @@
+<div id="container"></div>
+
+<script>
+    // Function to create the div with two p elements and one img
+    function createDivWithContent() {
+        // Create the parent div
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('custom-div');  // Add a class for styling if needed
+
+        // Create the first paragraph
+        const firstP = document.createElement('p');
+        firstP.textContent = 'This is the first paragraph.';
+
+        // Create the second paragraph
+        const secondP = document.createElement('p');
+        secondP.textContent = 'This is the second paragraph.';
+
+        // Create the image
+        const img = document.createElement('img');
+        img.src = 'https://via.placeholder.com/150'; // Replace with the actual image path
+        img.alt = 'Placeholder Image'; // Alt text for the image
+
+        // Append the paragraphs and image to the div
+        newDiv.appendChild(firstP);
+        newDiv.appendChild(secondP);
+        newDiv.appendChild(img);
+
+        // Append the new div to an existing container in the HTML
+        document.getElementById('container').appendChild(newDiv);
+    }
+
+    // Call the function to create and add the div to the DOM
+    createDivWithContent();
+</script>
+
+<style>
+    /* Styling for the custom div */
+    .custom-div {
+        border: 1px solid black;
+        padding: 10px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .custom-div img {
+        display: block;
+        margin: 10px auto;
+    }
+</style>
